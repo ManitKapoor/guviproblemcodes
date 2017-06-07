@@ -9,7 +9,7 @@ int main()
    int n;
    cin >> n; // No. of elements
    
-   map<int,int> A; // in c++ 11 or 14
+   map<int,int> A; 
    for(int i=0;i<n;i++)
    {
       int d;
