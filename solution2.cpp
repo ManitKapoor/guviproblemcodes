@@ -10,7 +10,7 @@ int main()
    int n;
    cin >> n; 
    
-   int A[n]; 
+   string A[n]; 
    for(int i=0;i<n;i++)
      cin >> A[i];
 	 
@@ -19,15 +19,18 @@ int main()
    string ans = "";
    
    for(int i=n-1;i>=0;i--)
-    ans = ans + to_string(A[i]);
-	
-	string fans = "";
-	
-    for(int i=0;i<ans.length();i++)
-      if(i%3 == 0 && i != ans.length()-1)
-        fans = fans + ans[i] + ",";
-      else 
-        fans = fans + ans[i]; 	  
+    ans = ans + A[i];
+    
+   string fans = ""; 
+   int j = 0;
+   for(int i=ans.length()-1;i>=0;i--)
+   {
+   	  if(j == 0 && i != ans.length()-1)
+   	    fans =  ","+fans;
+   	  fans =  ans[i]+fans;
+   	  j=(j+1)%3;
+   }
+   
    cout << fans;
    
    return 0;
