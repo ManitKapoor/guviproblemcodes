@@ -16,7 +16,7 @@ int main()
       cin >> d;
 	  A[d]++;
    }
-   
+
    for(auto it:A)
    if(it.second > 1)
      cout << it.first << " "; // output
